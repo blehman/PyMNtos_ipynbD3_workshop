@@ -59,7 +59,7 @@ graph_{{id}} = function(){
 
     var line = d3.svg.line()
         .interpolate("basis")
-        .x(function(d) { return x(parseDate2(d.date)); })
+        .x(function(d) { return x(parseDate1(d.date)); })
         .y(function(d) { return y(d.mentions); });
 
     var svg_{{id}} = d3.select("#graph_{{id}}").append("svg")

@@ -25,7 +25,7 @@ var yAxis = d3.svg.axis()
 
 var line = d3.svg.line()
     .interpolate("basis")
-    .x(function(d) { return x(parseDate2(d.date)); })
+    .x(function(d) { return x(parseDate1(d.date)); })
     .y(function(d) { return y(d.mentions); });
 
 var svg = d3.select("body").append("svg")
