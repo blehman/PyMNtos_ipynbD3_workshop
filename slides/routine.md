@@ -1,5 +1,5 @@
 
-<img src="imgs/routine.png" alt="Drawing"/>
+<img src="imgs/routine.png" alt="Drawing" width = "50%"/>
 
 
 
