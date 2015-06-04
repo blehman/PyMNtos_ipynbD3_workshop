@@ -32,9 +32,9 @@ body {
 graph_{{id}} = function(){
 
 
-    var margin = {top: 20, right: 80, bottom: 30, left: 50},
-        width = 960 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
+    var margin = {top: 20, right: 80, bottom: 30, left: 100},
+        width = 700 - margin.left - margin.right,
+        height = 300 - margin.top - margin.bottom;
 
     var parseDate1 = d3.time.format("%Y-%m-%d").parse;
     var parseDate2 = d3.time.format("%Y-%m-%d %H:%M:%S").parse;
@@ -66,7 +66,12 @@ graph_{{id}} = function(){
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
       .append("g")
+        .call(d3.behavior.zoom().scaleExtent([0.75, 8]).on("zoom", zoom_{{id}}))
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    function zoom_{{id}}() {
+      svg_{{id}}.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+    }
 
     d3.csv("../data/dfMelt.csv", function(error, dataMelt) {
       d3.csv("../data/df.csv", function(error, data) {
