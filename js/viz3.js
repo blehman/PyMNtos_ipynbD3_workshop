@@ -65,6 +65,7 @@ d3.csv("d3_notebook_example/data/dfMelt.csv", function(error, dataMelt) {
   });
 
   console.log(diets);
+
   svg.append("g")
       .classed("x axis",true)
       .attr("transform", "translate(0," + height + ")")
