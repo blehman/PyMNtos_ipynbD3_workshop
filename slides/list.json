@@ -1,1 +1,19 @@
-["index.md"]
+["index.md"
+  ,["trailphoto.md"
+    ,"tweet.md"
+    ,"tweet_data.md"
+    ,"routine.md"
+  ]
+    ,["healthy_fear.md"
+    ,"v1.md"
+    ,"v2.md"
+    ,"v3.md"
+    ,"v4.md"
+    ,"v5.md"
+    ,"v5.1.md"
+    ,"v6.md"
+    ,"v7.md"]
+    ,["d3ipython.md"
+    ,"streamgraph_preso2.md"]
+    ,"exit.md"
+]
